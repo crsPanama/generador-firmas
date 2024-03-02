@@ -37,7 +37,7 @@ export const Firma = () => {
 
   return (
     <>
-      <section ref={reference}>
+      <section ref={reference} className='w-[900px] mx-auto'>
         <div className='bg-white w-[608.57px]  mx-auto'>
           <div className='flex items'>
             <figure className='bg-white-200 w-1/3  '>
