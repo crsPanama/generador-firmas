@@ -1,4 +1,4 @@
-import { toPng, toJpeg } from 'html-to-image';
+import { toJpeg } from 'html-to-image';
 export const useScreenshot = () => {
   const generateImage = async (
     elementRef: HTMLElement | undefined,
