@@ -37,8 +37,8 @@ export const Firma = () => {
 
   return (
     <>
-      <section ref={reference} className='w-[900px] mx-auto'>
-        <div className='bg-white w-[608.57px]  mx-auto'>
+      <section className='w-[680px] mx-auto bg-transparent'>
+        <div className='bg-white w-full ml-auto' ref={reference}>
           <div className='flex items'>
             <figure className='bg-white-200 w-1/3  '>
               <img src={logo_crs} alt='' className='w-40 h-full ml-5' />
