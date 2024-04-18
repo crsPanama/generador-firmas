@@ -4,7 +4,7 @@ import logo_crs from '../assets/logo-crs.png';
 import thrifty from '../assets/thrifty.png';
 import ctg from '../assets/cars-to-go-logo.jpg';
 import firefly from '../assets/firefly.png';
-import hertz from '../assets/hertz1.png';
+import hertz from '../assets/hertz1.jpg';
 import { useScreenshot } from '../hooks/useScreenshot';
 // import { Form } from "./Form";
 import { Info } from '../types/input';
@@ -59,18 +59,18 @@ export const Firma = () => {
               </div>
             </div>
           </div>
-          <div className='border-t px-8 border-sky-600  flex gap-x-2'>
+          <div className='border-t px-8 border-sky-600  flex gap-x-2 items-center'>
             <figure>
-              <img src={hertz} alt='' className='w-12 h-12 object-contain' />
+              <img src={hertz} alt='' className='w-16 h-16 object-contain' />
             </figure>
             <figure>
-              <img src={thrifty} alt='' className='w-12 h-12 object-contain' />
+              <img src={thrifty} alt='' className='w-16 h-16 object-contain' />
             </figure>
             <figure>
-              <img src={firefly} alt='' className='w-12 h-12 object-contain' />
+              <img src={firefly} alt='' className='w-14 h-14 object-contain' />
             </figure>
             <figure>
-              <img src={ctg} alt='' className='w-12 h-12 object-contain' />
+              <img src={ctg} alt='' className='w-16 h-16 object-contain' />
             </figure>
           </div>
         </div>
