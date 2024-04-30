@@ -90,8 +90,7 @@ export const Firma = ({ signature }: { signature: 'CRS' | 'HERTZ' }) => {
         </div> */}
       </FirmaContainer>
 
-      <section className=' w-1/2 pt-5 mx-auto my-2'>
-        {/* <Form handleInputChange={handleInputChange} value={value} /> */}
+      <section className=' w-1/2 pt-5  mx-auto   my-2'>
         <Input
           type='text'
           value={nombre}
@@ -124,10 +123,10 @@ export const Firma = ({ signature }: { signature: 'CRS' | 'HERTZ' }) => {
           labelText='Telefono 2'
           onChange={handleChange}
         />
+        <div className='w-1/2 mx-auto text-center mt-3 bg-white rounded-md p-2'>
+          <button onClick={handleSubmit}>GENERATE IMAGE</button>
+        </div>
       </section>
-      <div className='w-1/2 mx-auto text-center mt-3 bg-white rounded-md p-2'>
-        <button onClick={handleSubmit}>GENERATE IMAGE</button>
-      </div>
     </>
   );
 };

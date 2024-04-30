@@ -13,9 +13,9 @@ export const App = () => {
 
   return (
     <main className='bg-slate-600 w-full h-screen flex flex-col justify-center items-center'>
-      <h1 className='text-white'>Generador de firmas</h1>
       <div className='py-5'>
-        <p className='text-white py-5'>Seleccionar firma</p>
+        <h1 className='text-white'>Generador de firmas</h1>
+        <p className='text-white py-5 text-center'>Seleccionar firma</p>
         <div className='flex gap-x-2'>
           <button
             className='bg-white w-full rounded-md p-4'
@@ -31,7 +31,7 @@ export const App = () => {
           </button>
         </div>
       </div>
-      <div className=' '>
+      <div className=''>
         <Firma signature={selectedSignature} />
       </div>
     </main>

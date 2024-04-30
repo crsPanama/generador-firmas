@@ -24,7 +24,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         name={name}
-        className={`${classes} w-full p-2`}
+        className={`${classes} w-full p-2 block`}
       />
     </>
   );
