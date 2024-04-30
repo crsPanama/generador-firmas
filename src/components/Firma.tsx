@@ -1,16 +1,13 @@
 import { useRef, useState, ChangeEvent } from 'react';
-
-import logo_crs from '../assets/logo-crs.png';
-import thrifty from '../assets/thrifty.png';
-import ctg from '../assets/cars-to-go-logo.jpg';
-import firefly from '../assets/firefly.png';
-import hertz from '../assets/hertz1.jpg';
 import { useScreenshot } from '../hooks/useScreenshot';
 // import { Form } from "./Form";
 import { Info } from '../types/input';
 import { Input } from './Input';
+import { FirmaContainer } from './FirmaContainer';
+import { FirmaCrs } from './FirmaCrs';
+import { FirmaHertz } from './FirmaHertz';
 
-export const Firma = () => {
+export const Firma = ({ signature }: { signature: 'CRS' | 'HERTZ' }) => {
   const reference = useRef(null);
   const { generateImage } = useScreenshot();
   const [value, setValue] = useState<Info>({
@@ -19,6 +16,7 @@ export const Firma = () => {
     telefono1: '',
     telefono2: '',
   });
+
   const { nombre, cargo, telefono1, telefono2 } = value;
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -37,8 +35,24 @@ export const Firma = () => {
 
   return (
     <>
-      <section className='w-[680px] mx-auto bg-transparent'>
-        <div className='bg-white w-full ml-auto' ref={reference}>
+      <FirmaContainer reference={reference}>
+        {signature === 'CRS' ? (
+          <FirmaCrs
+            cargo={cargo}
+            nombre={nombre}
+            telefono1={telefono1}
+            telefono2={telefono2}
+          />
+        ) : (
+          <FirmaHertz
+            cargo={cargo}
+            nombre={nombre}
+            telefono1={telefono1}
+            telefono2={telefono2}
+          />
+        )}
+
+        {/* <div className='bg-white w-full ml-auto' ref={reference}>
           <div className='flex items'>
             <figure className='bg-white-200 w-1/3  '>
               <img src={logo_crs} alt='' className='w-40 h-full ml-5' />
@@ -73,8 +87,8 @@ export const Firma = () => {
               <img src={ctg} alt='' className='w-16 h-16 object-contain' />
             </figure>
           </div>
-        </div>
-      </section>
+        </div> */}
+      </FirmaContainer>
 
       <section className=' w-1/2 pt-5 mx-auto my-2'>
         {/* <Form handleInputChange={handleInputChange} value={value} /> */}
