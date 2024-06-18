@@ -1,15 +1,16 @@
-import { useState } from 'react';
-import { Firma } from './components/Firma';
+import { useState } from 'react'
+import { Firma } from './components/Firma'
 
 enum Signatures {
   CRS = 'CRS',
   HERTZ = 'HERTZ',
+  THRIFTY = 'THRIFTY',
 }
 
 export const App = () => {
   const [selectedSignature, setSelectedSiganture] = useState<
     Signatures.HERTZ | Signatures.CRS
-  >(Signatures.CRS);
+  >(Signatures.CRS)
 
   return (
     <main className='bg-slate-600 w-full h-screen flex flex-col justify-center items-center'>
@@ -29,11 +30,17 @@ export const App = () => {
           >
             Crs
           </button>
+          <button
+            className='bg-white w-full rounded-md p-4'
+            onClick={() => setSelectedSiganture(Signatures.THRIFTY)}
+          >
+            Thrifty
+          </button>
         </div>
       </div>
       <div className=''>
         <Firma signature={selectedSignature} />
       </div>
     </main>
-  );
-};
+  )
+}

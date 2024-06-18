@@ -1,17 +1,31 @@
-import logo_crs from '../assets/logo-crs.png';
-import thrifty from '../assets/thrifty.png';
-import ctg from '../assets/cars-to-go-logo.jpg';
-import firefly from '../assets/firefly.png';
-import hertz from '../assets/hertz1.jpg';
+import logo_crs from '../assets/logo-crs.png'
+import thrifty from '../assets/thrifty.png'
+import ctg from '../assets/cars-to-go-logo.jpg'
+import firefly from '../assets/firefly.png'
+import hertz from '../assets/hertz1.jpg'
+import digital from '../assets/digital.png'
 
 interface Props {
-  nombre: string;
-  cargo: string;
-  telefono1: string;
-  telefono2?: string;
+  nombre: string
+  cargo: string
+  telefono1: string
+  telefono2?: string
+  hideLogos: {
+    thrifty: boolean
+    hertz: boolean
+    firefly: boolean
+    carsToGo: boolean
+    digital: boolean
+  }
 }
 
-export const FirmaCrs = ({ cargo, telefono1, telefono2, nombre }: Props) => {
+export const FirmaCrs = ({
+  cargo,
+  telefono1,
+  telefono2,
+  nombre,
+  hideLogos,
+}: Props) => {
   return (
     <>
       <div className='flex items'>
@@ -43,7 +57,12 @@ export const FirmaCrs = ({ cargo, telefono1, telefono2, nombre }: Props) => {
         <figure>
           <img src={ctg} alt='' className='w-16 h-16 object-contain' />
         </figure>
+        <figure>
+          {hideLogos.digital && (
+            <img src={digital} alt='' className='w-8 h-8 object-contain' />
+          )}
+        </figure>
       </div>
     </>
-  );
-};
+  )
+}
