@@ -9,7 +9,7 @@ enum Signatures {
 
 export const App = () => {
   const [selectedSignature, setSelectedSiganture] = useState<
-    Signatures.HERTZ | Signatures.CRS
+    Signatures.HERTZ | Signatures.CRS | Signatures.THRIFTY
   >(Signatures.CRS)
 
   return (
