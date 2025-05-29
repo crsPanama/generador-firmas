@@ -52,11 +52,19 @@ export const FirmaCrs = ({
           <img src={thrifty} alt='' className='w-16 h-16 object-contain' />
         </figure>
         <figure>
+          <img
+            src='https://admin.intermarketing.com.pa/assets/24c1d4c2-0aee-43d5-bad8-385a4db1755b'
+            alt=''
+            className='w-16 h-16 object-contain'
+          />
+        </figure>
+        <figure>
           <img src={firefly} alt='' className='w-14 h-14 object-contain' />
         </figure>
         <figure>
           <img src={ctg} alt='' className='w-16 h-16 object-contain' />
         </figure>
+
         <figure>
           {hideLogos.digital && (
             <img src={digital} alt='' className='w-8 h-8 object-contain' />
