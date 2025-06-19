@@ -5,11 +5,12 @@ enum Signatures {
   CRS = 'CRS',
   HERTZ = 'HERTZ',
   THRIFTY = 'THRIFTY',
+  DOLLAR = 'DOLLAR',
 }
 
 export const App = () => {
   const [selectedSignature, setSelectedSiganture] = useState<
-    Signatures.HERTZ | Signatures.CRS | Signatures.THRIFTY
+    Signatures.HERTZ | Signatures.CRS | Signatures.THRIFTY | Signatures.DOLLAR
   >(Signatures.CRS)
 
   return (
@@ -35,6 +36,12 @@ export const App = () => {
             onClick={() => setSelectedSiganture(Signatures.THRIFTY)}
           >
             Thrifty
+          </button>
+          <button
+            className='bg-white w-full rounded-md p-4'
+            onClick={() => setSelectedSiganture(Signatures.DOLLAR)}
+          >
+            Dollar
           </button>
         </div>
       </div>
