@@ -1,4 +1,3 @@
-import hertz from '../assets/hertz1.jpg'
 import logo_crs from '../assets/logo-crs.png'
 
 interface Props {
