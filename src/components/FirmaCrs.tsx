@@ -1,6 +1,6 @@
 import logo_crs from '../assets/logo-crs.png'
 import thrifty from '../assets/thrifty.png'
-import ctg from '../assets/cars-to-go-logo.jpg'
+import ctg from '../assets/cars-to-go-logo.png'
 import firefly from '../assets/firefly.png'
 import hertz from '../assets/hertz1.jpg'
 import digital from '../assets/digital.png'
