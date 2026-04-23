@@ -8,11 +8,12 @@ import { FirmaCrs } from './FirmaCrs'
 import { FirmaHertz } from './FirmaHertz'
 import { FirmaThrifty } from './FirmaThrifty'
 import { FirmaDollar } from './FirmaDollar'
+import { FirmaCtg } from './FirmaCtg'
 
 export const Firma = ({
   signature,
 }: {
-  signature: 'CRS' | 'HERTZ' | 'THRIFTY' | 'DOLLAR'
+  signature: 'CRS' | 'HERTZ' | 'THRIFTY' | 'DOLLAR' | 'CTG'
 }) => {
   const reference = useRef(null)
   const { generateImage } = useScreenshot()
@@ -69,6 +70,7 @@ export const Firma = ({
         )}
         {signature === 'THRIFTY' && <FirmaThrifty {...value} />}
         {signature === 'DOLLAR' && <FirmaDollar {...value} />}
+        {signature === 'CTG' && <FirmaCtg {...value} />}
       </FirmaContainer>
 
       <section className=' w-1/2 pt-5  mx-auto   my-2'>
