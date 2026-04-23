@@ -1,4 +1,3 @@
-import ctg from '../assets/cars-to-go-logo.png'
 import logo_crs from '../assets/logo-crs.png'
 
 interface Props {
